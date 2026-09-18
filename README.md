@@ -11,4 +11,4 @@ See below links for more information.
 
 ### Social Assitance Caseloads
 
-The file ["ont-sa-historical.csv"](ONT-SA/ont-sa-histrocial.csv). 
+The file ["ont-sa-historical.csv"](ONT-SA/ont-sa-historical.csv). 
