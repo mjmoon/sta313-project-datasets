@@ -28,9 +28,9 @@ historical data on the number of social assistance cases by month from 1969 to
 #### Attributes
 
 *  **year**
-  *  1969 to 2026
+    *  1969 to 2026
 *  **month**
-  *  1: January to 12: December
+    *  1: January to 12: December
 *  **cases**: Total number of cases on social assistance in Ontario. A case 
 refers to a single individual or a family unit on social assistance (e.g., a 
 family on social assistance is counted as one case).
@@ -72,9 +72,9 @@ for ODSP across Ontario
 #### Attributes
 
 *  **year**
-  *  1969 to 2026
+    *  1969 to 2026
 *  **month**
-  *  1: January to 12: December
+    *  1: January to 12: December
 *  **cma_code**: CMA code
 *  **cma**: CMA name
 *  **cases**: Total number of cases. A case refers to a single individual or a 
