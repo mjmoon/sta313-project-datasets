@@ -115,4 +115,90 @@ specified "month".
 *  The attribute descriptions and notes are retrieved from the 
 [data dictionary](ONT-SA/original/characteristics_data_dictionary_en.xlsx).
 
-https://geo.scholarsportal.info/#r/details/_uri@=2459296538$DLI_2021_Census_DBF_Eng_Nat_cma
+## Ontario Schools
+
+The files contain data about publicly funded Ontario schools (public and 
+Catholic schools) from kindergarten to grade 12. The original data files were
+retrieved from the following links.
+
+-  [School information and student demographics](https://data.ontario.ca/dataset/school-information-and-student-demographics)
+-  [Enrolment by grade in elementary schools](https://data.ontario.ca/dataset/enrolment-by-grade-in-elementary-schools)
+-  [Enrolment by grade in secondary schools](https://data.ontario.ca/dataset/enrolment-by-grade-in-secondary-schools)
+-  [Course enrolment in secondary schools](https://data.ontario.ca/dataset/course-enrolment-in-secondary-schools)
+
+The downloaded original files are found at [ONT-SCHOOL/original/](ONT-SCHOOL/original/). 
+The script used to prepare the files are found at [ONT-SCHOOL/prep-ONT-SCHOOL.R](ONT-SCHOOL/prep-ONT-SCHOOL.R).
+
+### School information and student demographic
+
+The file [**ont-school-demo-info.csv**](ONT-SCHOO/ont-school-demo-info.csv) 
+contains basic school information and a few student demographic indicators from
+2017-2018 to 2024-2025. These include:
+
+
+_Basic school information:_
+*  **year**: Academic year
+    *  "2017-2018" to "2024-2025"
+*  **board_number**: Unique identifier for each school board
+*  **board_name**: Name of school board
+*  **board_type**: Type of school board
+    *  "Pub Dist Sch Brd (E/F)": Public district school board (English or French)
+    *  "Cath Dist Sch Brd (E/F)": Catholic district school board (English or French)
+    *  "Provincial/Hospital": Special provincial schools or hospital school authorities
+    *  "Consortium": Special education school
+    *  "Sec Sch Brd (Sch Auth)": Secondary school board (school authority)
+    *  "Public School Board": Public school board
+    *  "Prot Sep Sch Brd (Sch Auth)": Protestant separate school board (school authority)
+    *  "College (Misc Board)": College (miscellaneous board)
+*  **school_number**: Unique identifier for each school
+*  **school_name**: Name of school
+*  **school_type**: Type of school
+    *  "Public"
+    *  "Catholic"
+    *  "Hospital"
+    *  "Provincial"
+    *  "Protestant Separate"
+*  **school_special_condition_code**: Indicates whether the school operates under non-standard circumstances
+    *  "Not applicable": Standard schools
+    *  "Junior High School"
+    *  "Demonstration"
+    *  "Alternative"
+    *  "Deaf/Blind"
+    *  "Deaf"
+    *  "Blind"
+    *  "Adult"
+    *  "Vocational/Occupational"
+    *  "Continuing Education"
+    *  "Online School"
+*  **school_level**: Level of school
+    *  "Elementary"
+    *  "Secondary"
+*  **grade_range**: Range of grade
+*  **street**: School address: street
+*  **municipality**: School address: municipality
+*  **city**: School address: city
+*  **postal_code**: School address: postal code
+*  **enrolment**: Number of students enrolled in the academic year
+*  **latitude**: Geographic location: latitude
+*  **longitude**: Geographic location: longitude
+
+_Student demographic indicators:_
+
+*  **percentage_of_students_whose_first_language_is_not_english**
+*  **percentage_of_students_whose_first_language_is_not_french**
+*  **percentage_of_students_who_are_new_to_canada_from_a_non_english_speaking_country**
+*  **percentage_of_students_who_are_new_to_canada_from_a_non_french_speaking_country**
+*  **percentage_of_students_receiving_special_education_services**
+*  **percentage_of_students_identified_as_gifted**
+*  **percentage_of_grade_3_students_achieving_the_provincial_standard_in_reading**
+*  **percentage_of_grade_3_students_achieving_the_provincial_standard_in_writing**
+*  **percentage_of_grade_3_students_achieving_the_provincial_standard_in_mathematics**
+*  **percentage_of_grade_6_students_achieving_the_provincial_standard_in_reading**
+*  **percentage_of_grade_6_students_achieving_the_provincial_standard_in_writing**
+*  **percentage_of_grade_6_students_achieving_the_provincial_standard_in_mathematics**
+*  **percentage_of_grade_9_students_achieving_the_provincial_standard_in_academic_mathematics**
+*  **percentage_of_grade_9_students_achieving_the_provincial_standard_in_applied_mathematics**
+*  **percentage_of_grade_9_students_achieving_the_provincial_standard_in_mathematics**
+*  **percentage_of_students_that_passed_the_grade_10_osslt_on_their_first_attempt**
+*  **percentage_of_school_aged_childrent_who_live_in_low_income_households**
+*  **percentage_of_students_whose_parents_have_no_degree_diploma_or_certificates**
