@@ -3,11 +3,11 @@ University of Toronto.
 
 ## Ontario Social Assistance Data Files
 
-The files contain historical data about Ontario's two main Social Assistance 
-programs: Ontario Works (OW) and Ontario Disability Support Program (ODSP). OW
-provides financial and employment assistance to individual facing temporary 
-financial need. ODSP is a long-term support program for those with disabilities. 
-See below links for more information.
+The files in [ONT-SA](ont-sa/) contain historical data about Ontario's two main 
+Social Assistance programs: Ontario Works (OW) and Ontario Disability Support 
+Program (ODSP). OW provides financial and employment assistance to individual 
+facing temporary financial need. ODSP is a long-term support program for those 
+with disabilities. See below links for more information.
 
 -  [Ontario Works](https://www.ontario.ca/page/ontario-works)
 -  [Ontario Disability Support Program](https://www.ontario.ca/page/ontario-disability-support-program)
@@ -117,9 +117,10 @@ specified "month".
 
 ## Ontario Schools
 
-The files contain data about publicly funded Ontario schools (public and 
-Catholic schools) from kindergarten to grade 12. The original data files were
-retrieved from the following links.
+The files in [ONT-SCHOOL](ont-school/) contain data about publicly funded 
+Ontario schools (public, Catholic, and some non-standard schools) from 
+kindergarten to grade 12. The original data files were retrieved from the 
+following links.
 
 -  [School information and student demographics](https://data.ontario.ca/dataset/school-information-and-student-demographics)
 -  [Enrolment by grade in elementary schools](https://data.ontario.ca/dataset/enrolment-by-grade-in-elementary-schools)
@@ -128,13 +129,17 @@ retrieved from the following links.
 
 The downloaded original files are found at [ONT-SCHOOL/original/](ONT-SCHOOL/original/). 
 The script used to prepare the files are found at [ONT-SCHOOL/prep-ONT-SCHOOL.R](ONT-SCHOOL/prep-ONT-SCHOOL.R).
+Note that school information data are school-level information, enrolment by 
+grade data are aggregated by school board, and course enrolment data are 
+aggregated across the province.
 
 ### School information and student demographic
 
-The file [**ont-school-demo-info.csv**](ONT-SCHOO/ont-school-demo-info.csv) 
+The file [**"ont-school-demo-info.csv"**](ONT-SCHOO/ont-school-demo-info.csv) 
 contains basic school information and a few student demographic indicators from
-2017-2018 to 2024-2025. These include:
+2017-2018 to 2024-2025. 
 
+#### Attributes
 
 _Basic school information:_
 *  **year**: Academic year
@@ -202,3 +207,67 @@ _Student demographic indicators:_
 *  **percentage_of_students_that_passed_the_grade_10_osslt_on_their_first_attempt**
 *  **percentage_of_school_aged_childrent_who_live_in_low_income_households**
 *  **percentage_of_students_whose_parents_have_no_degree_diploma_or_certificates**
+
+#### Notes
+
+*  OSSLT stands for Ontario Secondary School Literacy Test. You find more 
+information at [here](https://www.eqao.com/the-assessments/osslt/).
+*  To protect privacy of students, data are not reported when there are fewer
+than 10 individual represented. In certain cases, 0 reported in the data may
+not be 0 but small values rounded down to 0 randomly. Similarly, indicators 
+recorded as 100 percent may be results of values being randomly rounded up.
+*  Grade range 9-12 may include pre-grade 9.
+
+
+### Enrolment by grade data
+
+The files [**"ont-school-enrlmnt-elementary.csv"**](ONT-SCHOOL/ont-school-enrlmnt-elementary.csv)
+and [**"ont-school-enrlmnt-secondary.csv"**](ONT-SCHOOL/ont-school-enrlmnt-secondary.csv)
+contain enrolment information by grade for each school board from 2011-2012 to
+2024-2025 academic years.
+
+#### Attributes
+
+*  **year**: Academic year
+    *  "2011-2012" to "2024-2025"
+*  **board_number**: Unique identifier for each school board
+*  **board_name**: Name of school board
+*  **board_type**: Type of school board (same as above)
+*  **total_enrolment**
+
+_Elementary schools:_
+
+*  **junior_kindergarten_enrolment**
+*  **kindergarten_enrolment**
+*  **grade_1_enrolment**
+*  **grade_2_enrolment**
+*  **grade_3_enrolment**
+*  **grade_4_enrolment**
+*  **grade_5_enrolment**
+*  **grade_6_enrolment**
+*  **grade_7_enrolment**
+*  **grade_8_enrolment**
+
+_Secondary school:_
+
+*  **grade_9_enrolment**
+*  **grade_10_enrolment**
+*  **grade_11_enrolment**
+*  **grade_12_enrolment**
+
+### Course enrolment in secondary schools data
+
+The file [**"ont-school-enrlmnt-secondary-courses.csv"](ONT-SCHOOL/ont-school-enrlmnt-secondary-courses.csv)
+contain course enrolment information across the province from 2011-2012 to
+2024-2025 academic years.
+
+#### Attributes
+
+*  **year**: Academic year
+    *  "2011-2012" to "2024-2025"
+*  **course_code**
+*  **course_description**
+*  **grade**
+*  **pathway_or_destination**
+*  **enrolment**
+
