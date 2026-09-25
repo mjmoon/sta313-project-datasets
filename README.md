@@ -5,7 +5,7 @@ University of Toronto.
 
 The files in [ONT-SA](ont-sa/) contain historical data about Ontario's two main 
 Social Assistance programs: Ontario Works (OW) and Ontario Disability Support 
-Program (ODSP). OW provides financial and employment assistance to individual 
+Program (ODSP). OW provides financial and employment assistance to individuals 
 facing temporary financial need. ODSP is a long-term support program for those 
 with disabilities. See below links for more information.
 
@@ -19,7 +19,7 @@ The downloaded original files are found at [ONT-SA/original/](ONT-SA/original/).
 The script used to prepare the files are found at [ONT-SA/prep-ONT-SA.R](ONT-SA/prep-ONT-SA.R).
 
 
-### Social Assistance Caseloads
+### Social Assistance caseloads
 
 The file [**"ont-sa-historical.csv"**](ONT-SA/ont-sa-historical.csv) contains 
 historical data on the number of social assistance cases by month from 1969 to
@@ -38,7 +38,7 @@ family on social assistance is counted as one case).
 Ontario. The number of beneficiaries refers to the total number of single 
 individuals and heads of family units on social assistance plus all their 
 dependents (i.e., spouses, dependent children, and dependent adults).
-  *  NA mean not available
+  *  NA mean not available.
 
 #### Notes
 
@@ -49,7 +49,7 @@ benefits.
 General Welfare Assistance Act . The Ontario Disability Support Program was
 proclaimed on June 1,1998 and replaced the Family Benefits Act.     
 *  1998 to current: Data as from April 1998 include recipients of Ontario Works,
-Ontario Disability Support Program, Temporary Care Assistance and Assistance for 
+Ontario Disability Support Program, Temporary Care Assistance, and Assistance for 
 Children with Severe Disabilities.                          
 *  The attribute descriptions and notes are retrieved from the 
 [data dictionary](ONT-SA/original/historical_sa_recipients_data_dictionary_1969_to_current.xlsx).
@@ -63,16 +63,16 @@ metropolitan area (CMA) and across the province from 2003 to 2026.
 *  [**ont-sa-characteristic-odsp-cma.csv**](ONT-SA/ont-sa-characteristic-odsp-cma.csv) 
 for ODSP cases by CMA
 *  [**ont-sa-characteristic-odsp-ont.csv**](ONT-SA/ont-sa-characteristic-odsp-ont.csv)
-for ODSP across Ontario
+for ODSP cases across Ontario
 *  [**ont-sa-characteristic-ow-cma.csv**](ONT-SA/ont-sa-characteristic-ow-cma.csv) 
 for ODSP cases by CMA
 *  [**ont-sa-characteristic-ow-ont.csv**](ONT-SA/ont-sa-characteristic-ow-ont.csv)
-for ODSP across Ontario
+for ODSP cases across Ontario
 
 #### Attributes
 
 *  **year**
-    *  1969 to 2026
+    *  2003 to 2026
 *  **month**
     *  1: January to 12: December
 *  **cma_code**: CMA code
@@ -96,7 +96,7 @@ _For ODSP cases:_
 
 *  **moa035**: Number of cases whose length is 35 months or shorter
 *  **moa3659**: Number of cases whose length is between 36 and 59 months 
-*  **moa60**: Number of cases whose length isr 60 months or longer
+*  **moa60**: Number of cases whose length is 60 months or longer
 
 _For OW cases:_
 
@@ -108,14 +108,14 @@ _For OW cases:_
 #### Notes
 
 *  The size of the family is determined by the total number of individuals 
-(primary applicant, spouse, dependent children and dependent adults) in the 
+(primary applicant, spouse, dependent children, and dependent adults) in the 
 household.
 *  Length of a case is number of consecutive months on assistance as of 
 specified "month".
 *  The attribute descriptions and notes are retrieved from the 
 [data dictionary](ONT-SA/original/characteristics_data_dictionary_en.xlsx).
 
-## Ontario Schools
+## Ontario School Data Files
 
 The files in [ONT-SCHOOL](ont-school/) contain data about publicly funded 
 Ontario schools (public, Catholic, and some non-standard schools) from 
@@ -137,7 +137,7 @@ aggregated across the province.
 
 The file [**"ont-school-demo-info.csv"**](ONT-SCHOO/ont-school-demo-info.csv) 
 contains basic school information and a few student demographic indicators from
-2017-2018 to 2024-2025. 
+2017-2018 to 2024-2025 academic years. 
 
 #### Attributes
 
@@ -179,13 +179,13 @@ _Basic school information:_
     *  "Elementary"
     *  "Secondary"
 *  **grade_range**: Range of grade
-*  **street**: School address: street
-*  **municipality**: School address: municipality
-*  **city**: School address: city
-*  **postal_code**: School address: postal code
+*  **street**: School address - street
+*  **municipality**: School address - municipality
+*  **city**: School address - city
+*  **postal_code**: School address - postal code
 *  **enrolment**: Number of students enrolled in the academic year
-*  **latitude**: Geographic location: latitude
-*  **longitude**: Geographic location: longitude
+*  **latitude**: Geographic location - latitude
+*  **longitude**: Geographic location - longitude
 
 _Student demographic indicators:_
 
@@ -210,10 +210,10 @@ _Student demographic indicators:_
 
 #### Notes
 
-*  OSSLT stands for Ontario Secondary School Literacy Test. You find more 
+*  OSSLT stands for Ontario Secondary School Literacy Test. You can find more 
 information at [here](https://www.eqao.com/the-assessments/osslt/).
 *  To protect privacy of students, data are not reported when there are fewer
-than 10 individual represented. In certain cases, 0 reported in the data may
+than 10 individuals represented. In certain cases, 0 reported in the data may
 not be 0 but small values rounded down to 0 randomly. Similarly, indicators 
 recorded as 100 percent may be results of values being randomly rounded up.
 *  Grade range 9-12 may include pre-grade 9.
@@ -230,8 +230,8 @@ contain enrolment information by grade for each school board from 2011-2012 to
 
 *  **year**: Academic year
     *  "2011-2012" to "2024-2025"
-*  **board_number**: Unique identifier for each school board
-*  **board_name**: Name of school board
+*  **board_number**: Unique identifier for each school board (same as above)
+*  **board_name**: Name of school board (same as above)
 *  **board_type**: Type of school board (same as above)
 *  **total_enrolment**
 
@@ -248,7 +248,7 @@ _Elementary schools:_
 *  **grade_7_enrolment**
 *  **grade_8_enrolment**
 
-_Secondary school:_
+_Secondary schools:_
 
 *  **grade_9_enrolment**
 *  **grade_10_enrolment**
@@ -257,7 +257,7 @@ _Secondary school:_
 
 ### Course enrolment in secondary schools data
 
-The file [**"ont-school-enrlmnt-secondary-courses.csv"](ONT-SCHOOL/ont-school-enrlmnt-secondary-courses.csv)
+The file [**"ont-school-enrlmnt-secondary-courses.csv"**](ONT-SCHOOL/ont-school-enrlmnt-secondary-courses.csv)
 contain course enrolment information across the province from 2011-2012 to
 2024-2025 academic years.
 
